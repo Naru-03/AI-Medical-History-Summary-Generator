@@ -1,4 +1,4 @@
-# 🏥 MedAI Assistant - Medical History Summarizer
+# 🏥 AI Medical History Summary Generator - Medical History Summarizer
 
 A modern web application that uses AI to analyze and summarize medical documents, providing comprehensive health insights with a beautiful, professional interface.
 

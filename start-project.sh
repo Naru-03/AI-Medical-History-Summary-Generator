@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "========================================"
-echo "   MedAI Assistant - Project Starter"
+echo "   AI Medical History Summary Generator - Project Starter"
 echo "========================================"
 echo
 

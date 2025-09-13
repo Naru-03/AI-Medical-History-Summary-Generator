@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo    MedAI Assistant - Project Setup
+echo    AI Medical History Summary Generator - Project Setup
 echo ========================================
 echo.
 

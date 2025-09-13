@@ -40,7 +40,7 @@ function Navigation() {
                         fontSize: '1.5rem',
                         fontWeight: 'bold'
                     }}>
-                        🏥 MedAI Assistant
+                        🏥 AI Medical History Summary Generator
                     </h1>
                 </div>
                 

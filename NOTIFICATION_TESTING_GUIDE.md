@@ -1,6 +1,6 @@
 # 🔔 Notification Testing Guide
 
-This guide will help you test all notification features in your MedAI Assistant application.
+This guide will help you test all notification features in your AI Medical History Summary Generator application.
 
 ## 🚀 Quick Start Testing
 

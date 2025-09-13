@@ -1,10 +1,10 @@
-# MedAI Assistant - Makefile
+# AI Medical History Summary Generator - Makefile
 .PHONY: help setup start stop clean install-backend install-frontend start-backend start-frontend
 
 # Default target
 help:
 	@echo "========================================"
-	@echo "   MedAI Assistant - Available Commands"
+	@echo "   AI Medical History Summary Generator - Available Commands"
 	@echo "========================================"
 	@echo ""
 	@echo "  make setup          - Install all dependencies"
@@ -33,7 +33,7 @@ install-frontend:
 
 # Start both servers
 start:
-	@echo "Starting MedAI Assistant..."
+	@echo "Starting AI Medical History Summary Generator..."
 	@echo "Backend:  http://localhost:5000"
 	@echo "Frontend: http://localhost:3000"
 	@echo ""

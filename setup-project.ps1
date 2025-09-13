@@ -1,6 +1,6 @@
-# MedAI Assistant - PowerShell Project Setup
+# AI Medical History Summary Generator - PowerShell Project Setup
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "   MedAI Assistant - Project Setup" -ForegroundColor Cyan
+Write-Host "   AI Medical History Summary Generator - Project Setup" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
