@@ -1,0 +1,29 @@
+Patient Name: Jane Smith
+Age: 67
+History: The patient presents with a history of chronic obstructive pulmonary disease (COPD), hypertension, and osteoarthritis. She was diagnosed with COPD 10 years ago and has experienced increasing shortness of breath over the past year. Hypertension has been managed for 15 years with medication. Osteoarthritis affects both knees and the right hip, causing pain and limited mobility. She reports no known drug allergies.
+
+Recent Events: Last month, the patient was hospitalized for an acute exacerbation of COPD, treated with intravenous steroids and antibiotics. She was discharged after 5 days and prescribed a tapering dose of prednisone. She also received physical therapy for her osteoarthritis during her hospital stay.
+
+Medications:
+- Lisinopril 20mg once daily for hypertension
+- Albuterol inhaler as needed for COPD
+- Tiotropium inhaler once daily for COPD
+- Prednisone taper (recent)
+- Acetaminophen 500mg as needed for osteoarthritis pain
+
+Social History: The patient is a retired teacher, lives alone, and is independent in activities of daily living. She quit smoking 8 years ago. Alcohol use is minimal.
+
+Physical Exam: Blood pressure 138/82 mmHg, pulse 78 bpm, respiratory rate 20/min, oxygen saturation 95% on room air. Bilateral wheezing noted on lung auscultation. Crepitus and tenderness in both knees.
+
+Assessment:
+1. COPD, stable but with recent exacerbation.
+2. Hypertension, controlled.
+3. Osteoarthritis, symptomatic.
+
+Plan:
+- Continue current medications.
+- Encourage regular use of inhalers.
+- Schedule follow-up with pulmonologist in 2 months.
+- Refer to orthopedic specialist for evaluation of hip pain.
+- Continue physical therapy.
+- Monitor blood pressure and respiratory symptoms.

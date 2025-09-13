@@ -1,0 +1,11 @@
+/* Basic CSS for app layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+h2 {
+    color: #2c3e50;
+}

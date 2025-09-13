@@ -1,0 +1,5 @@
+Patient Name: John Doe
+Age: 54
+History: Patient has a history of hypertension and type 2 diabetes. He is currently taking metformin and lisinopril. No known drug allergies. Reports occasional headaches and mild chest pain. Last visit: 3 months ago.
+Medications: Metformin 500mg daily, Lisinopril 10mg daily.
+Plan: Continue current medications, monitor blood pressure, follow up in 6 months.
