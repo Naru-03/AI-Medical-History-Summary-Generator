@@ -38,23 +38,24 @@ function Login() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                background: 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)'
+                background: 'var(--gradient-bg)'
             }
         } >
             <div style = {
                 {
-                    background: '#fff',
+                    background: 'var(--card-bg)',
                     padding: '2rem 2.5rem',
                     borderRadius: '12px',
-                    boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
-                    minWidth: '320px'
+                    boxShadow: 'var(--shadow)',
+                    minWidth: '320px',
+                    border: '1px solid var(--border-color)'
                 }
             } >
             <h2 style = {
                 {
                     textAlign: 'center',
                     marginBottom: '1.5rem',
-                    color: '#2d6cdf'
+                    color: 'var(--text-primary)'
                 }
             } > Login </h2> <form onSubmit={
             handleSubmit
