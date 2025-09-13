@@ -298,7 +298,7 @@ This report is for informational purposes only and is not a substitute for profe
                             📝 Summary
                         </h2>
                         <div style={{
-                            background: '#f8fafc',
+                            background: 'var(--bg-primary)',
                             padding: '1.5rem',
                             borderRadius: '12px',
                             border: '1px solid #e2e8f0',

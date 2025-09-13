@@ -325,7 +325,7 @@ function Dashboard() {
                         <div style={{ marginBottom: '1.5rem' }}>
                             <h3 style={{ color: '#2d6cdf', marginBottom: '1rem' }}>📝 Summary:</h3>
                             <div style={{
-                                background: '#f1f5fb',
+                                background: 'var(--bg-primary)',
                                 borderRadius: '12px',
                                 padding: '1.5rem',
                                 fontSize: '1rem',

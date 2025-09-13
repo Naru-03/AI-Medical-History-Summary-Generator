@@ -80,25 +80,7 @@ function Settings() {
                         <h3 style={{ margin: '0 0 1rem 0', color: '#2d6cdf' }}>🎨 Appearance</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <label style={{ fontWeight: '500', color: 'var(--text-primary)' }}>Theme</label>
-                                <select
-                                    value={theme}
-                                    onChange={(e) => handleThemeChange(e.target.value)}
-                                    style={{
-                                        padding: '0.5rem',
-                                        borderRadius: '6px',
-                                        border: '1px solid var(--border-color)',
-                                        background: 'var(--input-bg)',
-                                        color: 'var(--text-primary)'
-                                    }}
-                                >
-                                    <option value="light">Light</option>
-                                    <option value="dark">Dark</option>
-                                    <option value="auto">Auto (System)</option>
-                                </select>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <label style={{ fontWeight: '500', color: 'var(--text-primary)' }}>Quick Toggle</label>
+                                <label style={{ fontWeight: '500', color: 'var(--text-primary)' }}>Appearance</label>
                                 <button
                                     onClick={toggleTheme}
                                     style={{
