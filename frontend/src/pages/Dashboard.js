@@ -1,7 +1,8 @@
 // Dashboard page stub
 import React, {
     useState,
-    useEffect
+    useEffect,
+    useRef
 } from 'react';
 import {
     useNavigate
@@ -10,7 +11,7 @@ import Loading from '../components/Loading';
 import { useNotifications } from '../components/NotificationSystem';
 
 function Dashboard() {
-    const [file, setFile] = useState(null);
+    const [files, setFiles] = useState([]);
     const [message, setMessage] = useState('');
     const [summaryRequested, setSummaryRequested] = useState(false);
     const [uploading, setUploading] = useState(false);
@@ -21,8 +22,10 @@ function Dashboard() {
     const [confidence, setConfidence] = useState('');
     const [sources, setSources] = useState([]);
     const [uploadProgress, setUploadProgress] = useState(0);
+    const [isUploaded, setIsUploaded] = useState(false);
     const navigate = useNavigate();
     const { notify } = useNotifications();
+    const fileInputRef = useRef(null);
 
     useEffect(() => {
         const hist = JSON.parse(localStorage.getItem('summaryHistory') || '[]');
@@ -46,38 +49,53 @@ function Dashboard() {
         setUploading(true);
         setUploadProgress(0);
         
-        // Simulate upload progress
-        const progressInterval = setInterval(() => {
-            setUploadProgress(prev => {
-                if (prev >= 90) {
-                    clearInterval(progressInterval);
-                    return prev;
-                }
-                return prev + 10;
-            });
-        }, 200);
+        // Validate sizes (5 MB per file)
+        const MAX_SIZE = 5 * 1024 * 1024;
+        const oversize = files.find(f => f.size > MAX_SIZE);
+        if (oversize) {
+            setUploading(false);
+            setMessage(`File too large: ${oversize.name}. Max 5MB each.`);
+            notify.error('Upload Failed', `File too large: ${oversize.name} (>5MB).`);
+            return;
+        }
+
+        // Simulate overall upload progress
+        const total = Math.max(files.length, 1);
+        let completed = 0;
+        const tick = () => {
+            const pct = Math.min(100, Math.round(((completed) / total) * 100));
+            setUploadProgress(pct);
+        };
+        tick();
 
         try {
-            const formData = new FormData();
-            formData.append('file', file);
-            const res = await fetch('http://localhost:5000/api/upload', {
-                method: 'POST',
-                body: formData
-            });
-            const data = await res.json();
-            
-            clearInterval(progressInterval);
+            let successCount = 0;
+            for (const f of files) {
+                const formData = new FormData();
+                formData.append('file', f);
+                // Send one request per file to existing endpoint
+                const res = await fetch('http://localhost:5000/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await res.json();
+                if (data.success) successCount += 1;
+                completed += 1; tick();
+            }
             setUploadProgress(100);
-            
-            if (data.success) {
-                setMessage('File uploaded successfully! Ready to generate summary.');
-                notify.upload('File uploaded successfully! Ready to generate summary.');
+            if (successCount === files.length) {
+                setMessage(`${successCount} file(s) uploaded successfully! Ready to generate summary.`);
+                notify.upload(`${successCount} file(s) uploaded successfully!`);
+                setIsUploaded(true);
+            } else if (successCount > 0) {
+                setMessage(`${successCount}/${files.length} files uploaded. Some failed.`);
+                notify.warning('Partial Upload', `${successCount}/${files.length} files uploaded.`);
+                setIsUploaded(successCount > 0);
             } else {
                 setMessage('Upload failed. Please try again.');
                 notify.error('Upload Failed', 'Please try again.');
             }
         } catch (error) {
-            clearInterval(progressInterval);
             setMessage('Upload failed. Please check your connection.');
             notify.error('Upload Failed', 'Please check your connection.');
         } finally {
@@ -103,6 +121,8 @@ function Dashboard() {
                 hist.push({...data, timestamp: new Date().toISOString()});
                 localStorage.setItem('summaryHistory', JSON.stringify(hist));
                 notify.summary('Medical summary generated successfully!');
+                // Re-enable upload after summary is generated
+                setIsUploaded(false);
                 navigate('/summary');
             } else {
                 setMessage('Summary request failed. Please try again.');
@@ -118,7 +138,7 @@ function Dashboard() {
 
     const handleReset = () => {
         if (window.confirm('Are you sure you want to reset all data? This will clear the current file and summary.')) {
-            setFile(null);
+            setFiles([]);
             setSummary('');
             setConditions([]);
             setMedications([]);
@@ -126,7 +146,16 @@ function Dashboard() {
             setSources([]);
             setMessage('');
             localStorage.removeItem('summary');
+            setIsUploaded(false);
             notify.info('Data Reset', 'All data has been cleared successfully.');
+        }
+    };
+
+    const handleClearSelectedFile = () => {
+        setFiles([]);
+        setIsUploaded(false);
+        if (fileInputRef.current) {
+            fileInputRef.current.value = '';
         }
     };
 
@@ -170,8 +199,10 @@ function Dashboard() {
                                     Upload Medical Document:
                                 </label>
                                 <input
+                                    ref={fileInputRef}
                                     type="file"
-                                    onChange={(e) => setFile(e.target.files[0])}
+                                    multiple
+                                    onChange={(e) => setFiles(Array.from(e.target.files || []))}
                                     accept=".pdf,.txt,.doc,.docx"
                                     style={{
                                         width: '100%',
@@ -192,6 +223,84 @@ function Dashboard() {
                                         e.target.style.background = 'var(--input-bg)';
                                     }}
                                 />
+                                {/* File help text - improved UI */}
+                                <div style={{
+                                    marginTop: '0.75rem',
+                                    background: '#f8fafc',
+                                    border: '1px solid #e2e8f0',
+                                    borderRadius: '10px',
+                                    padding: '0.75rem'
+                                }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                                        <span style={{ fontSize: '1rem' }}>ℹ️</span>
+                                        <span style={{ color: '#2d3748', fontWeight: '600' }}>Guidelines</span>
+                                    </div>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                                        {[".txt", ".md", ".csv", ".json", ".pdf", ".doc", ".docx"].map((t, i) => (
+                                            <span key={i} style={{
+                                                background: '#edf2f7',
+                                                color: '#2d3748',
+                                                border: '1px solid #e2e8f0',
+                                                borderRadius: '999px',
+                                                padding: '0.2rem 0.6rem',
+                                                fontSize: '0.8rem'
+                                            }}>{t}</span>
+                                        ))}
+                                        <span style={{
+                                            background: '#e6fffa',
+                                            color: '#234e52',
+                                            border: '1px solid #b2f5ea',
+                                            borderRadius: '999px',
+                                            padding: '0.2rem 0.6rem',
+                                            fontSize: '0.8rem',
+                                            marginLeft: '0.25rem'
+                                        }}>Max 5MB each</span>
+                                        <span style={{
+                                            background: '#faf5ff',
+                                            color: '#553c9a',
+                                            border: '1px solid #e9d8fd',
+                                            borderRadius: '999px',
+                                            padding: '0.2rem 0.6rem',
+                                            fontSize: '0.8rem'
+                                        }}>Multiple selection supported</span>
+                                    </div>
+                                </div>
+                                {/* Selected files chips */}
+                                {files.length > 0 && (
+                                    <div style={{ marginTop: '0.6rem', display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                                        {files.map((f, idx) => (
+                                            <span key={idx} style={{
+                                                background: '#fff',
+                                                border: '1px solid #e2e8f0',
+                                                color: '#4a5568',
+                                                borderRadius: '999px',
+                                                padding: '0.25rem 0.6rem',
+                                                fontSize: '0.8rem'
+                                            }}>
+                                                {f.name} · {(f.size / 1024).toFixed(0)} KB
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                                {/* Small Clear button */}
+                                <div style={{ marginTop: '0.5rem', textAlign: 'right' }}>
+                                    <button
+                                        type="button"
+                                        onClick={handleClearSelectedFile}
+                                        disabled={uploading}
+                                        style={{
+                                            backgroundColor: '#ffffff',
+                                            color: '#4a5568',
+                                            border: '1px solid #e2e8f0',
+                                            padding: '0.3rem 0.6rem',
+                                            borderRadius: '999px',
+                                            cursor: 'pointer',
+                                            fontSize: '0.8rem'
+                                        }}
+                                    >
+                                        Clear
+                                    </button>
+                                </div>
                             </div>
                             
                             {/* Upload Progress */}
@@ -219,21 +328,21 @@ function Dashboard() {
                             
                             <button
                                 type="submit"
-                                disabled={!file || uploading}
+                                disabled={files.length === 0 || uploading || isUploaded}
                                 style={{
-                                    backgroundColor: file && !uploading ? '#2d6cdf' : '#ccc',
+                                    backgroundColor: files.length > 0 && !uploading && !isUploaded ? '#2d6cdf' : '#ccc',
                                     color: 'white',
                                     padding: '0.75rem 1.5rem',
                                     border: 'none',
                                     borderRadius: '8px',
-                                    cursor: file && !uploading ? 'pointer' : 'not-allowed',
+                                    cursor: files.length > 0 && !uploading && !isUploaded ? 'pointer' : 'not-allowed',
                                     width: '100%',
                                     fontSize: '1rem',
                                     fontWeight: 'bold',
                                     transition: 'all 0.3s ease'
                                 }}
                             >
-                                {uploading ? 'Uploading...' : 'Upload File'}
+                                {uploading ? 'Uploading...' : (isUploaded ? 'Uploaded' : (files.length > 1 ? `${files.length} files selected` : 'Upload'))}
                             </button>
                         </form>
                     </div>
@@ -256,7 +365,7 @@ function Dashboard() {
                                 transition: 'all 0.3s ease'
                             }}
                         >
-                            {summaryRequested ? 'Generating Summary...' : 'Generate Summary'}
+                            {summaryRequested ? 'Generating…' : 'Summarize'}
                         </button>
                     </div>
 
@@ -323,7 +432,7 @@ function Dashboard() {
                     {/* Summary Display */}
                     {summary && !summaryRequested && (
                         <div style={{ marginBottom: '1.5rem' }}>
-                            <h3 style={{ color: '#2d6cdf', marginBottom: '1rem' }}>📝 Summary:</h3>
+                            <h3 style={{ color: '#2d6cdf', marginBottom: '1rem' }}>📝 Result:</h3>
                             <div style={{
                                 background: 'var(--bg-primary)',
                                 borderRadius: '12px',

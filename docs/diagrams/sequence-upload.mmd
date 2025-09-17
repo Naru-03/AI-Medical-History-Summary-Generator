@@ -1,0 +1,13 @@
+sequenceDiagram
+  participant U as User
+  participant F as Frontend (React)
+  participant B as Backend (Flask)
+  participant S as Storage (uploads/)
+
+  U->>F: Select file & click Upload
+  F->>B: POST /upload (multipart/form-data)
+  B->>S: Save file to backend/uploads
+  S-->>B: Success
+  B-->>F: 200 OK { message }
+  F-->>U: Show notification (success)
+

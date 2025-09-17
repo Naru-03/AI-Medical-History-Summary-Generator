@@ -301,4 +301,4 @@ export const useNotifications = () => {
     return context;
 };
 
-export default NotificationSystem;
+export default NotificationProvider;

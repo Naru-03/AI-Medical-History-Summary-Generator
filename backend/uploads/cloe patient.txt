@@ -1,0 +1,48 @@
+Patient Name: Chloe S. Nguyen
+MRN: P003
+DOB: 1993-05-30  Sex: Female  Last Encounter: 2025-09-09
+Primary: Dr. T. Morales  Specialist: Endocrinology
+
+Chief Complaint:
+- Poorly controlled Type 1 Diabetes with recurrent hyperglycemia.
+
+HPI:
+- Reports glucose variability with morning hyperglycemia and occasional nocturnal hypoglycemia. Uses CGM intermittently. No DKA symptoms (no abdominal pain, no vomiting). Diet irregular due to shift work.
+
+Past Medical History:
+- Type 1 Diabetes Mellitus (dx 2005), Mild non-proliferative diabetic retinopathy (2024), Hypothyroidism (Hashimoto’s).
+
+Surgical History:
+- None.
+
+Medications (Home):
+- Insulin glargine 24 units SC HS
+- Insulin aspart with meals (carb ratio 1:12; correction 1 unit per 40 mg/dL >120)
+- Levothyroxine 100 mcg PO daily
+- Glucagon nasal spray PRN severe hypoglycemia
+
+Allergies:
+- Penicillin: hives
+
+Social/Family:
+- Non-smoker; occasional wine; works night shifts (nurse). Mother: hypothyroidism; Father: T2DM.
+
+Vitals (Visit):
+- BP 118/72, HR 74, RR 14, Temp 36.7°C, BMI 23.6
+
+Physical Exam:
+- Normal heart/lung exam; feet without ulcers; intact monofilament.
+
+Key Labs/Studies:
+- A1c 8.9% (2025-09-05), fasting glucose 172 mg/dL, Creatinine 0.8 mg/dL, eGFR >90, Urine microalbumin 18 mg/g, TSH 3.6 µIU/mL, Free T4 1.2 ng/dL.
+- Eye exam 2024: mild NPDR.
+
+Assessment:
+1) Type 1 Diabetes—suboptimal control with dawn phenomenon and shift-related variability. 2) Hypothyroidism—near goal. 3) Early retinopathy—stable.
+
+Plan:
+- Adjust glargine to 26 units HS; update insulin-to-carb ratio to 1:10 during night shifts, maintain 1:12 daytime; keep correction as is.
+- Initiate continuous CGM with alerts; diabetes education focused on shift-work meal timing.
+- Continue levothyroxine 100 mcg PO daily; recheck TSH in 6–8 weeks.
+- Foot care reviewed; schedule ophthalmology follow-up in 6 months.
+- Follow-up in 4 weeks with glucose downloads.

@@ -1,3 +1,6 @@
 flask
 flask-cors
 spacy
+transformers
+torch
+rake-nltk

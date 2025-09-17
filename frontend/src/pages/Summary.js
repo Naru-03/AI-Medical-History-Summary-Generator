@@ -112,7 +112,6 @@ This report is for informational purposes only and is not a substitute for profe
         return (
             <div style={{
                 minHeight: '100vh',
-                background: 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

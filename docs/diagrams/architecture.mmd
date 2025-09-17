@@ -1,0 +1,11 @@
+flowchart LR
+  User([User])
+  Browser[React Frontend\nRouting/Pages\nTheme & Notifications]
+  API[(Flask Backend)]
+  Uploads[(File Storage\nbackend/uploads)]
+
+  User -->|Clicks/Inputs| Browser
+  Browser -->|REST API| API
+  API -->|Read/Write| Uploads
+  API -->|JSON| Browser
+

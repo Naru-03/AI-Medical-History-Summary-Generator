@@ -1,0 +1,48 @@
+Patient Name: Alice M. Rivera
+MRN: P001
+DOB: 1971-03-04  Sex: Female  Last Encounter: 2025-09-12
+Primary: Dr. K. Owens  Specialist: Cardiology
+
+Chief Complaint:
+- Intermittent chest tightness with exertion and fatigue x3 weeks.
+
+HPI:
+- Substernal pressure, 3–5/10, non-radiating, occurs while climbing stairs; resolves with rest in 5–10 min. No syncope. Mild ankle swelling evenings. Baseline exercise tolerance declined from 5 to 2 city blocks. Denies fever/cough.
+
+Past Medical History:
+- Hypertension (2016), Hyperlipidemia (2017), Prediabetes (A1c 6.2% in 2024), GERD.
+
+Surgical History:
+- Cesarean section (2003), laparoscopic appendectomy (2010).
+
+Medications (Home):
+- Lisinopril 10 mg PO daily
+- Atorvastatin 20 mg PO nightly
+- Omeprazole 20 mg PO daily
+- Nitroglycerin 0.4 mg SL PRN chest pain (not used)
+
+Allergies:
+- Sulfa antibiotics: rash
+
+Social/Family:
+- Non-smoker; alcohol 1–2 drinks/week. Walks dog daily. Father MI at 62; mother HTN.
+
+Vitals (Visit):
+- BP 146/88, HR 76, RR 16, Temp 36.6°C, SpO2 98% RA, BMI 29.1
+
+Physical Exam:
+- Normal S1/S2, no murmurs; lungs clear; no JVD; trace bilateral ankle edema.
+
+Key Labs/Studies:
+- 2025-09-10: LDL 132 mg/dL, HDL 43, TG 182, hs-CRP 2.6 mg/L, CMP normal, A1c 6.4%.
+- ECG: NSR, nonspecific ST-T changes. CXR: normal.
+
+Assessment:
+1) Suspected stable angina in the setting of HTN/HLD. 2) Hypertension, suboptimally controlled. 3) GERD. 4) Prediabetes.
+
+Plan:
+- Begin metoprolol succinate 25 mg PO daily.
+- Titrate atorvastatin to 40 mg nightly; reinforce diet/exercise.
+- Schedule exercise treadmill test; use nitroglycerin PRN; ER precautions given.
+- Home BP log; follow-up 2–3 weeks; consider add thiazide if BP >130/80.
+- Continue omeprazole; GERD precautions.

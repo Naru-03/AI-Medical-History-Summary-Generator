@@ -1,0 +1,215 @@
+Patient Name: John A. Doe
+MRN: 12345678
+DOB: 1959-08-17 (Age 66)
+Sex: Male
+Primary Care Physician: Dr. Emily Carter
+Consulting Specialists: Cardiology (Dr. Raj Patel), Endocrinology (Dr. Mei Lin), Pulmonology (Dr. Sarah Nguyen)
+Date of Last Encounter: 2025-09-10
+
+Chief Complaint:
+- Progressive shortness of breath on exertion (6 months), worsening ankle edema, and intermittent chest tightness over the past 3 weeks.
+
+History of Present Illness:
+- The patient reports increasing dyspnea while walking 2-3 blocks (previously 5-6 blocks). Orthopnea (2 pillows, new in last 2 months). Paroxysmal nocturnal dyspnea x2 episodes in last month. Intermittent substernal pressure rated 4/10, non-radiating, lasting 5-10 minutes, occurs with moderate exertion and resolves with rest; no associated nausea or diaphoresis. Noted bilateral ankle swelling (R>L), worse by evening. Weight gain ~4.5 kg over 3 months. Denies syncope. Reports new cough productive of white sputum in mornings. No hemoptysis or fever.
+
+Past Medical History:
+- Type 2 Diabetes Mellitus (dx 2009), suboptimal control (A1c range 7.8–8.6% last 2 years)
+- Hypertension (dx 2005)
+- Hyperlipidemia (dx 2010)
+- Coronary Artery Disease (CAD): Non-STEMI in 2016; PCI with drug-eluting stent to mid-LAD
+- Heart Failure with preserved EF suspected (HFpEF) since 2023 (NYHA class II-III symptoms)
+- Obstructive Sleep Apnea (OSA), diagnosed 2018; CPAP prescribed, inconsistent adherence
+- Obesity (Class I), BMI ~31
+- Chronic Kidney Disease (CKD) stage 2 (baseline eGFR 70–85 mL/min/1.73 m²)
+- Gastroesophageal Reflux Disease (GERD)
+- Osteoarthritis (knees)
+
+Past Surgical History:
+- PCI with DES to mid-LAD (2016)
+- Laparoscopic cholecystectomy (2002)
+- Right knee arthroscopy (meniscal debridement, 2012)
+- Childhood tonsillectomy/adenoidectomy
+
+Medications (Home):
+- Metformin 1000 mg PO BID
+- Empagliflozin 10 mg PO daily
+- Insulin glargine 18 units subcutaneously HS
+- Lisinopril 20 mg PO daily
+- Metoprolol succinate 50 mg PO daily
+- Furosemide 20 mg PO every morning (recently increased from 10 mg 2 weeks ago)
+- Atorvastatin 40 mg PO nightly
+- Aspirin 81 mg PO daily
+- Clopidogrel 75 mg PO daily (post-PCI; continued for secondary prevention per cardiology)
+- Pantoprazole 40 mg PO daily
+- Acetaminophen 500 mg PO q6h PRN pain
+- Nitroglycerin 0.4 mg SL PRN chest pain (up to 3 doses, call EMS if unresolved)
+
+Allergies:
+- Penicillin: urticarial rash
+- Shellfish: lip swelling/throat tightness (avoids contrast premedication if iodinated contrast required)
+
+Family History:
+- Father: MI at 58, T2DM
+- Mother: Hypertension, stroke at 74
+- Sister: Breast cancer at 62
+- No known familial hypercholesterolemia or sudden cardiac death
+
+Social History:
+- Former smoker: 18 pack-years, quit 2001
+- Alcohol: 2–3 drinks/week (beer)
+- Occupation: Accountant (sedentary)
+- Married, lives with spouse
+- Diet: High carbohydrate intake, frequent restaurant meals; limited vegetable intake
+- Exercise: Inconsistent walking 1–2x/week, 20–30 mins
+
+Review of Systems:
+- Constitutional: +Fatigue, +weight gain; denies fever/chills/night sweats
+- Cardiac: +Chest pressure with exertion, +ankle swelling, denies syncope/palpitations
+- Respiratory: +Dyspnea on exertion, +morning cough with white sputum, +orthopnea/PND; denies hemoptysis
+- GI: +GERD symptoms, denies melena/hematochezia
+- GU: No dysuria/hematuria; nocturia x1–2
+- Neuro: No focal weakness, no confusion
+- Endocrine: Polyphagia; denies polyuria/polydipsia currently
+- MSK: Knee pain with activity
+- Skin: No rashes or ulcers reported
+
+Physical Examination (2025-09-10):
+- Vitals: BP 148/86 mmHg; HR 82 bpm, regular; RR 18; Temp 36.7°C; SpO2 95% RA; Weight 98.4 kg; Height 177 cm; BMI 31.4
+- General: Overweight male, mild dyspnea after ambulation from waiting room, no acute distress at rest
+- HEENT: PERRL, mucous membranes moist
+- Neck: JVD ~9 cm at 45°, no carotid bruits
+- Lungs: Bibasilar crackles (R>L), no wheezes
+- Cardiac: Regular rate and rhythm, soft S4, no murmurs/rubs
+- Abdomen: Soft, non-tender, no HSM
+- Extremities: Bilateral pitting edema +1 at ankles; distal pulses 2+
+- Neuro: Grossly intact
+- Skin: Warm, no cyanosis
+
+Laboratory Data:
+- 2025-08-30 (Outpatient):
+  - A1c 8.2%
+  - Fasting glucose 162 mg/dL
+  - Lipid panel: TC 172 mg/dL, LDL 86 mg/dL, HDL 42 mg/dL, TG 196 mg/dL
+  - CMP: Na 138, K 4.6, Cl 102, CO2 24, BUN 21, Cr 1.08 (eGFR 74), Ca 9.2, AST 22, ALT 26
+  - CBC: WBC 7.8, Hgb 13.8, Plt 252
+  - NT-proBNP: 612 pg/mL (elevated)
+  - TSH 2.1 µIU/mL
+  - hs-CRP 3.8 mg/L
+- 2025-09-10:
+  - Glucose (random) 184 mg/dL; A1c pending
+  - CMP stable from prior; K 4.5; Cr 1.12
+  - NT-proBNP 694 pg/mL
+
+Cardiac/Imaging Studies:
+- ECG (2025-09-10): NSR at 80 bpm, nonspecific ST-T changes, no acute ischemia
+- Echocardiogram (2025-09-05): LVEF 55–60%; concentric LVH; mild left atrial enlargement; Grade II diastolic dysfunction; mild MR; RV function normal; no pericardial effusion
+- CXR (2025-09-10): Mild interstitial markings at bases; cardiomegaly borderline; small right pleural effusion suspected
+- Prior Cath (2016): 80% mid-LAD stenosis s/p DES; mild non-obstructive disease in RCA and LCx
+
+Diabetes Complications Screening:
+- Urine microalbumin (2025-07-20): 38 mg/g (microalbuminuria)
+- Foot exam (2025-06-10): Intact monofilament, no ulcers
+- Ophthalmology (2025-03-15): Mild NPDR; annual follow-up
+
+Assessment:
+1) Heart Failure with preserved EF (HFpEF), likely volume overload given orthopnea, elevated NT-proBNP, bibasilar crackles, ankle edema, small pleural effusion.
+2) Exertional chest tightness—stable angina vs microvascular ischemia—no rest pain; low-intermediate pretest probability for ACS currently.
+3) Hypertension—suboptimally controlled on current regimen.
+4) Type 2 Diabetes Mellitus—A1c 8.2%, microalbuminuria present; needs better control.
+5) Hypertriglyceridemia and low HDL; LDL at goal with statin; consider additional triglyceride-lowering therapy.
+6) OSA—suboptimal CPAP adherence likely worsening HFpEF and hypertension.
+7) CKD stage 2—monitor renal function on diuretics/ACEi/SGLT2.
+8) GERD—stable on PPI.
+9) Obesity—contributes to HFpEF and T2DM.
+
+Plan:
+- HFpEF/Volume:
+  - Increase furosemide to 40 mg PO daily x3 days, then 20–40 mg based on daily weights and symptoms.
+  - Start spironolactone 12.5 mg PO daily if K <5.0 and Cr stable; recheck BMP in 1 week.
+  - Continue empagliflozin 10 mg PO daily (HFpEF benefit).
+  - Low-sodium diet (<2 g/day), fluid restriction 1.5–2 L/day for 1 week.
+  - Daily weights; call if >2 lb/day or >5 lb/week.
+- Ischemia evaluation:
+  - Schedule exercise nuclear stress test within 2 weeks; consider antianginal titration post results.
+  - Continue aspirin 81 mg and clopidogrel 75 mg (reassess need for DAPT at cardiology visit).
+- Hypertension:
+  - Continue lisinopril 20 mg daily; consider uptitration vs add-thiazide if BP remains >130/80 after diuretic adjustment.
+  - Continue metoprolol succinate 50 mg daily.
+- Lipids:
+  - Continue atorvastatin 40 mg nightly.
+  - Consider icosapent ethyl 2 g BID if TG persist >150 mg/dL despite lifestyle.
+- Diabetes:
+  - Reinforce SMBG; target fasting 90–130 mg/dL.
+  - Consider GLP-1 RA (e.g., semaglutide) for weight, glycemic, and CV benefits; coordinate with endocrinology.
+  - Maintain metformin and basal insulin; reassess insulin dose after diuresis and diet changes.
+- OSA:
+  - Reinforce CPAP adherence; offer mask refitting and humidification review.
+- Lifestyle:
+  - Referral to cardiac rehab or supervised exercise once euvolemic.
+  - Dietitian consult for low-sodium, Mediterranean-style diet and weight management.
+- Follow-up:
+  - Phone check in 3–4 days for weight and symptoms.
+  - Clinic follow-up in 1–2 weeks; BMP in 7 days; NT-proBNP in 2–4 weeks.
+
+Discharge/Outpatient Instructions (Given today):
+- Medication changes: Furosemide increased; start spironolactone pending labs; no NSAIDs.
+- Daily weights and symptom diary.
+- Emergency: If chest pain persists >10 minutes after nitroglycerin x1, call EMS.
+
+Home Medication List (Post-visit Adjusted):
+- Metformin 1000 mg PO BID
+- Empagliflozin 10 mg PO daily
+- Insulin glargine 18 units SC HS (adjust per SMBG with clinician guidance)
+- Lisinopril 20 mg PO daily (reassess next visit)
+- Metoprolol succinate 50 mg PO daily
+- Furosemide 40 mg PO daily x3 days, then 20–40 mg daily per weights
+- Spironolactone 12.5 mg PO daily (start if BMP acceptable; check labs in 1 week)
+- Atorvastatin 40 mg PO nightly
+- Aspirin 81 mg PO daily
+- Clopidogrel 75 mg PO daily
+- Pantoprazole 40 mg PO daily
+- Nitroglycerin 0.4 mg SL PRN chest pain
+- Acetaminophen 500 mg PO q6h PRN pain
+
+Recent Weights (Patient Log):
+- 2025-06-15: 95.0 kg
+- 2025-07-20: 96.8 kg
+- 2025-08-22: 97.6 kg
+- 2025-09-10: 98.4 kg
+
+Dietary Notes:
+- Breakfast: Bagel or cereal with milk; coffee with cream/sugar.
+- Lunch: Deli sandwich; chips; soda.
+- Dinner: Pasta or takeout; red meat 3–4x/week.
+- Snacks: Cookies/ice cream in evenings.
+- Sodium: Frequent canned soups and processed meats.
+- Counseling provided on reducing sodium, swapping refined carbs for vegetables/legumes, and limiting sugary beverages.
+
+Symptom Timeline:
+- 2025-03 to 2025-05: Stable exertional tolerance; mild intermittent pedal edema.
+- 2025-06: Noted increasing exertional dyspnea; orthopnea developed.
+- 2025-08: Edema worsened; NT-proBNP elevated (612 pg/mL).
+- 2025-09: Chest tightness with moderate exertion; diuretic increased, partial relief.
+
+Patient Questions/Concerns:
+- Concerned about frequent urination with higher diuretic dose—educated on timing (AM dosing).
+- Wants to lose weight—interested in GLP-1 RA and dietitian referral.
+- Confused about dual antiplatelet therapy—plan to review duration with cardiology after stress test.
+
+Provider Impression and Rationale:
+- Presentation consistent with HFpEF exacerbation likely due to dietary indiscretion, suboptimal CPAP adherence, and inadequate diuresis. Low-to-intermediate suspicion for significant new obstructive CAD; nonetheless, stress imaging warranted given CAD history and exertional chest tightness. Diabetes remains above target; SGLT2i beneficial for HF and renal outcomes; consider GLP-1 add-on.
+
+Pending/Planned:
+- BMP (1 week) for K/Cr after spironolactone initiation and titrated furosemide.
+- Nuclear stress test within 2 weeks.
+- Cardiology follow-up post-stress test.
+- Dietitian and sleep medicine check for CPAP adherence.
+
+Contact Information:
+- Cardiology Clinic: (555) 212-0001
+- Endocrinology Clinic: (555) 212-0002
+- After-hours: (555) 212-9999
+
+Signatures:
+- Attending: Dr. Emily Carter, MD
+- Date/Time: 2025-09-10 14:26

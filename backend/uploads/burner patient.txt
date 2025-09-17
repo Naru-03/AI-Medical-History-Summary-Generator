@@ -1,0 +1,49 @@
+Patient Name: Bernard “Ben” K. Shah
+MRN: P002
+DOB: 1950-11-22  Sex: Male  Last Encounter: 2025-09-08
+Primary: Dr. R. Coleman  Specialist: Pulmonology
+
+Chief Complaint:
+- Chronic cough and morning sputum; worsening dyspnea on exertion.
+
+HPI:
+- 6-month history of productive cough (white/yellow), uses rescue inhaler 3–4×/week; shortness of breath when walking >1 block. No hemoptysis, fevers, or chest pain. Reports 2 COPD exacerbations last winter treated outpatient.
+
+Past Medical History:
+- COPD (GOLD 2), Former smoker 35 pack-years (quit 2012), Hypertension, Osteoarthritis knees.
+
+Surgical History:
+- Right inguinal hernia repair (2005).
+
+Medications (Home):
+- Tiotropium 18 mcg inhaled daily
+- Budesonide-formoterol 160/4.5 mcg 2 puffs BID
+- Albuterol HFA 2 puffs q4–6h PRN wheeze
+- Lisinopril 20 mg PO daily
+- Acetaminophen 500 mg PO q6h PRN pain
+
+Allergies:
+- NKDA
+
+Social/Family:
+- Lives with spouse; retired electrician. Alcohol: rare. Father: emphysema; Mother: HTN.
+
+Vitals (Visit):
+- BP 138/82, HR 78, RR 18, Temp 36.8°C, SpO2 95% RA, BMI 27.4
+
+Physical Exam:
+- Prolonged expiratory phase, scattered wheeze; no edema; normal heart sounds.
+
+Key Labs/Studies:
+- 2025-08 spirometry: FEV1 62% predicted, FEV1/FVC 0.57.
+- CXR: hyperinflation, no consolidation. Eosinophils 180/µL.
+
+Assessment:
+1) COPD with increased symptoms but no acute infection. 2) Hypertension controlled. 3) OA knees.
+
+Plan:
+- Add roflumilast 500 mcg PO daily given prior frequent exacerbations.
+- Continue LAMA/LABA/ICS; inhaler technique reviewed; refill albuterol.
+- Vaccinations reviewed (influenza, pneumococcal, COVID booster).
+- Pulmonary rehab referral; activity plan with rest pacing.
+- Return in 6–8 weeks or sooner if increased sputum purulence, dyspnea, or fever.
