@@ -16,7 +16,11 @@ Design a small, maintainable AI-driven app scaffold with a clear frontend–back
 ## System Architecture
 High-level architecture showing user interactions with frontend, and API communication with backend.
 
-![Architecture Diagram](diagrams/architecture.png)
+<p align="center">
+  <img alt="Architecture Diagram" src="./diagrams/architecture.png" width="720" />
+  <br/>
+  <em>Figure 1. System architecture.</em>
+ </p>
 
 ### Components
 - Frontend (React): Routing, pages (`Dashboard`, `History`, `Login`, `Settings`, `Summary`), global `ThemeProvider`, notifications, and loading UI.
@@ -26,7 +30,11 @@ High-level architecture showing user interactions with frontend, and API communi
 ## Data Flow
 User events on the frontend trigger API calls to the backend. The backend processes requests (e.g., file operations) and returns responses rendered by the frontend. Notifications provide user feedback; the theme system ensures consistent styling.
 
-![Sequence Diagram](diagrams/sequence-upload.png)
+<p align="center">
+  <img alt="Sequence Diagram" src="./diagrams/sequence-upload.png" width="720" />
+  <br/>
+  <em>Figure 2. Upload sequence.</em>
+ </p>
 
 ## Technology Stack
 - Backend: Python, Flask
@@ -94,10 +102,38 @@ b:\\AI Project\\
 - Upload storage: `backend/uploads/`
 - Designed to extend with AI services (e.g., NLP pipelines for summarization)
 
+### API Surface (initial)
+- `POST /upload` – accepts multipart/form-data, stores file under `backend/uploads`
+- `GET /health` – returns service health
+- `GET /files` – lists uploaded files (future)
+- `GET /summary/:id` – returns AI-generated summary (future)
+
+### Environment Variables
+- `PORT` – backend port (default 5000)
+- `NODE_ENV` – frontend mode (`development` or `production`)
+- `API_BASE_URL` – frontend-to-backend base URL
+
+### Security Baseline
+- Limit upload file types and size
+- Sanitize file names, store outside web root
+- Disable debug in production, hide stack traces
+- Add CORS restrictions per environment
+- Future: JWT-based auth, role-based access control
+
 ## Frontend Overview
 - Entry point: `frontend/src/index.js`, root app in `frontend/src/App.js`
 - Components: `ThemeProvider`, `NotificationSystem`, `Navigation`, `Loading`
 - Pages: `Dashboard`, `History`, `Login`, `Settings`, `Summary`, `ThemeTest`, `NotificationTest`
+
+### UX & Accessibility
+- Color-contrast friendly theme tokens
+- Keyboard-focus styles and skip-to-content (add in future)
+- ARIA roles for nav and notifications
+- Reduced motion preference respected (future)
+
+### Notifications
+- Non-blocking toasts via `NotificationSystem`
+- Levels: info, success, warning, error
 
 ## Setup and Run
 1. Prerequisites: Node.js 18+, Python 3.10+, pip
@@ -109,12 +145,37 @@ b:\\AI Project\\
    - macOS/Linux: `./start-project.sh`
 4. Access the frontend in your browser at the printed URL (typically `http://localhost:3000`).
 
+### Local Development Tips
+- Frontend: `npm start` from `frontend/`
+- Backend: `python backend/app.py` (or `flask run` if configured)
+- Update theme tokens using `update-theme-colors.js`
+
+### Production Build (frontend)
+- `cd frontend && npm run build` → outputs production bundle to `frontend/build`
+
 ## Evaluation Criteria
 - Architecture clarity and modularity
 - Code readability and maintainability
 - UX quality: theming, notifications, responsiveness
 - Extensibility for AI tasks (e.g., document processing)
 - Documentation completeness
+
+## AI Roadmap
+- Phase 1: Rule-based extraction from text files (keywords, counts)
+- Phase 2: Summarization using small local models (constraint-friendly)
+- Phase 3: Retrieval-Augmented Generation for multi-file synthesis
+- Phase 4: Feedback loop and evaluation harness (human-in-the-loop)
+
+## Evaluation & Benchmarking
+- Functional tests: upload/save/list
+- UX checks: notification display and theme consistency
+- Performance: upload latency, render FPS on dashboard
+- AI quality (future): ROUGE/BLEU for summaries vs references
+
+## Operating Guidelines
+- Version pinning for critical deps; document upgrade steps
+- Logging minimal PII; structured logs for server
+- Backups of `backend/uploads/` in development (do not sync to public repos)
 
 ## Risks and Mitigations
 - Data privacy for uploaded files → keep local, sanitize, apply access controls
