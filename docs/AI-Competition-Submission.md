@@ -102,6 +102,29 @@ b:\\AI Project\\
 - Upload storage: `backend/uploads/`
 - Designed to extend with AI services (e.g., NLP pipelines for summarization)
 
+## Summary Creation
+This project includes a planned, modular approach to generating summaries from uploaded documents. The pipeline is designed to work locally by default and can be swapped for cloud models if allowed by competition rules.
+
+### Current Baseline (lightweight, local)
+- Simple text normalization and extraction from `.txt` files
+- Heuristic extractive summary: sentence scoring via keyword frequency and basic ranking
+- Optional stopword removal to improve signal-to-noise
+
+### Planned Enhancements
+- Linguistic features using a lightweight NLP library (e.g., `spaCy` small model or `nltk`) for sentence boundary detection and noun/verb phrase emphasis
+- Model-based summarization using small local transformer models via `transformers` when permitted
+- Retrieval-Augmented Generation to combine multiple files for a single coherent summary
+
+### Design Principles
+- Offline-first: prefer local execution; avoid sending data externally unless explicitly configured
+- Replaceable strategy: a `summary_service` abstraction to switch implementations without changing routes
+- Deterministic fallbacks: if models are unavailable, return an extractive summary
+
+### Outputs
+- Short abstract (1–3 sentences)
+- Key points (bulleted)
+- Optional highlights (counts, entities) for dashboards
+
 ### API Surface (initial)
 - `POST /upload` – accepts multipart/form-data, stores file under `backend/uploads`
 - `GET /health` – returns service health
