@@ -1,7 +1,7 @@
 # AI Medical History Summary Generator – Competition Submission
 
 ## Executive Summary
-This submission presents a full-stack AI-enabled application featuring a Python Flask backend and a React frontend. The system provides secure upload/management of patient-like documents, a responsive dashboard UI, theming, notifications, and a ready-to-run developer experience. The documentation includes architecture, data flow, project structure, setup, evaluation, risks, ethics, and future work.
+This submission presents a full-stack AI-enabled application featuring a Python Flask backend and a React frontend. The system provides secure upload/management of medical documents, a responsive dashboard UI, theming, notifications, and a ready-to-run developer experience. It scaffolds an AI Medical History Summarizer that produces concise, role‑aware summaries with source citations (provenance) and clear safety guardrails. The documentation covers architecture, data flow, project structure, setup, evaluation, Responsible AI, and future work.
 
 ## Problem Statement
 Design a small, maintainable AI-driven app scaffold with a clear frontend–backend separation, easy local setup, and UX primitives (theme, notifications, navigation). The system should be extensible for future AI tasks like document analysis, summarization, and history tracking while maintaining clean architecture.
@@ -24,7 +24,7 @@ High-level architecture showing user interactions with frontend, and API communi
 
 ### Components
 - Frontend (React): Routing, pages (`Dashboard`, `History`, `Login`, `Settings`, `Summary`), global `ThemeProvider`, notifications, and loading UI.
-- Backend (Flask): REST endpoints, file upload handling under `backend/uploads`, and core app startup in `backend/app.py`.
+- Backend (Flask): REST endpoints, file upload handling under `backend/uploads`, and core app startup in `backend/app.py`. Future adapters for FHIR/HL7/wearables feed the Summary Service; provenance indexing supports source links.
 - Shared Scripts: Cross-platform setup and start scripts at the repository root.
 
 ## Data Flow
@@ -115,6 +115,11 @@ This project includes a planned, modular approach to generating summaries from u
 - Model-based summarization using small local transformer models via `transformers` when permitted
 - Retrieval-Augmented Generation to combine multiple files for a single coherent summary
 
+### Provenance & Guardrails (planned)
+- Sentence-level citations with pointers back to document spans and source systems (e.g., FHIR resources)
+- Confidence tags per sentence; highlight low-confidence items
+- Hybrid safe templates (for clinical safety) overlaid with AI-generated narrative
+
 ### Design Principles
 - Offline-first: prefer local execution; avoid sending data externally unless explicitly configured
 - Replaceable strategy: a `summary_service` abstraction to switch implementations without changing routes
@@ -129,7 +134,13 @@ This project includes a planned, modular approach to generating summaries from u
 - `POST /upload` – accepts multipart/form-data, stores file under `backend/uploads`
 - `GET /health` – returns service health
 - `GET /files` – lists uploaded files (future)
-- `GET /summary/:id` – returns AI-generated summary (future)
+- `GET /summary/:id` – returns AI-generated summary with optional provenance (future)
+
+### Planned API Extensions
+- `POST /adapters/fhir/import` – import FHIR bundles for a patient (future)
+- `POST /adapters/hl7/ingest` – ingest HL7 messages (future)
+- `POST /adapters/wearables/ingest` – ingest wearable data (future)
+- `GET /provenance/:id` – return sentence-level citations, confidence tags, and source anchors (future)
 
 ### Environment Variables
 - `PORT` – backend port (default 5000)
@@ -157,6 +168,10 @@ This project includes a planned, modular approach to generating summaries from u
 ### Notifications
 - Non-blocking toasts via `NotificationSystem`
 - Levels: info, success, warning, error
+
+### Role‑Aware Views (planned)
+- Clinician mode: concise clinical summary; highlights risks, medications, interactions; deeper provenance on demand.
+- Patient mode: plain-language summary, definitions and helpful links, reduced jargon, clear source links.
 
 ## Setup and Run
 1. Prerequisites: Node.js 18+, Python 3.10+, pip
@@ -187,7 +202,9 @@ This project includes a planned, modular approach to generating summaries from u
 - Phase 1: Rule-based extraction from text files (keywords, counts)
 - Phase 2: Summarization using small local models (constraint-friendly)
 - Phase 3: Retrieval-Augmented Generation for multi-file synthesis
-- Phase 4: Feedback loop and evaluation harness (human-in-the-loop)
+- Phase 4: Adapters for FHIR/HL7/wearables and source provenance indexing
+- Phase 5: Role‑aware modes (clinician/patient) with safety checks and explanations
+- Phase 6: Feedback loop and evaluation harness (human-in-the-loop)
 
 ## Evaluation & Benchmarking
 - Functional tests: upload/save/list
@@ -205,10 +222,12 @@ This project includes a planned, modular approach to generating summaries from u
 - Dependency drift → pin key versions, provide setup scripts
 - AI model integration complexity → abstract service layer, mock interfaces during dev
 
-## Ethics and Privacy
-- Handle any personal data responsibly
-- Avoid storing sensitive data beyond what is necessary
-- Provide clear user consent and data deletion options in future enhancements
+## Responsible AI (Security, Fairness, Privacy, Legal)
+- Security: encrypted storage in transit/at rest (future), least-privilege credentials, audit trails
+- Privacy: consent ledger, configurable retention and residency, de-identification for analytics
+- Fairness: audit summary completeness/coverage by demographics, neutral language linting
+- Legal: disclaimers (not diagnostic), jurisdiction-aware data handling
+- Explainability & Safety: sentence-level provenance, confidence tags, no treatment advice; drug interactions only from verified rule DB
 
 ## Future Work
 - Integrate document parsing and summarization in `backend/app.py`
