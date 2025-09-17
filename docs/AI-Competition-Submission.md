@@ -1,4 +1,4 @@
-# AI Project – Competition Submission
+# AI Medical History Summary Generator – Competition Submission
 
 ## Executive Summary
 This submission presents a full-stack AI-enabled application featuring a Python Flask backend and a React frontend. The system provides secure upload/management of patient-like documents, a responsive dashboard UI, theming, notifications, and a ready-to-run developer experience. The documentation includes architecture, data flow, project structure, setup, evaluation, risks, ethics, and future work.
