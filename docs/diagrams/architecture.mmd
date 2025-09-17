@@ -3,9 +3,14 @@ flowchart LR
   Browser[React Frontend\nRouting/Pages\nTheme & Notifications]
   API[(Flask Backend)]
   Uploads[(File Storage\nbackend/uploads)]
+  SummSvc[[Summary Service\nExtractive/Abstractive]]
+  NLP[(Local NLP/Model\nspaCy / Transformers)]
 
   User -->|Clicks/Inputs| Browser
   Browser -->|REST API| API
   API -->|Read/Write| Uploads
-  API -->|JSON| Browser
+  API -->|Summarize| SummSvc
+  SummSvc -->|Load Text| Uploads
+  SummSvc -->|Process| NLP
+  API -->|JSON (files, summaries)| Browser
 

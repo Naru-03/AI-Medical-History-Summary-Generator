@@ -3,11 +3,25 @@ sequenceDiagram
   participant F as Frontend (React)
   participant B as Backend (Flask)
   participant S as Storage (uploads/)
+  participant Y as Summary Service
+  participant M as Local Model/NLP
 
   U->>F: Select file & click Upload
   F->>B: POST /upload (multipart/form-data)
   B->>S: Save file to backend/uploads
   S-->>B: Success
-  B-->>F: 200 OK { message }
-  F-->>U: Show notification (success)
+  par async
+    B->>Y: summarize(fileId)
+    Y->>S: load(fileId)
+    S-->>Y: text
+    Y->>M: extract/abstract(text)
+    M-->>Y: summary
+    Y-->>B: summary payload
+  and
+    B-->>F: 200 OK { message }
+  end
+  F-->>U: Show notification (upload success)
+  F->>B: GET /summary/:id (polling or SSE in future)
+  B-->>F: 200 OK { summary }
+  F-->>U: Render summary in UI
 
